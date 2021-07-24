@@ -11,13 +11,13 @@ module.exports = {
       .use("vue-svg-loader")
       .loader("vue-svg-loader");
   },
-  configureWebpack: {
-    devServer: {
-      port: 3000,
-      // https://github.com/vuejs-templates/webpack/issues/378
-      watchOptions: {
-        poll: true,
-      },
-    },
-  }
+  // configureWebpack: {
+  //   devServer: {
+  //     port: 3000,
+  //     // https://github.com/vuejs-templates/webpack/issues/378
+  //     watchOptions: {
+  //       poll: true,
+  //     },
+  //   },
+  // }
 };
