@@ -75,7 +75,7 @@ footer {
       gap: 0px;
     }
 
-    .div {
+    > div {
       display: flex;
       flex: 1;
     }
