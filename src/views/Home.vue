@@ -1,11 +1,15 @@
 <template>
-  <div class="home"></div>
+  <div class="home">
+    <BlogPost :post='welcomeScreen' />
+    <BlogPost :post='post' v-for="(post, index) in sampleBlogPost" :key="index"/>
+  </div>
 </template>
 
 <script>
+import BlogPost from "../components/BlogPost";
 export default {
   name: "Home",
-  components: {},
+  components: { BlogPost },
   data() {
     return {
       welcomeScreen: {
@@ -22,7 +26,7 @@ export default {
           blogCoverPhoto: "beautiful-stories",
         },
         {
-          title: "This is a Filter Title!",
+          title: "This is a Filter Title!2",
           blogHTML: "This is a filter blog post title!",
           blogCoverPhoto: "designed-for-everyone",
         },
