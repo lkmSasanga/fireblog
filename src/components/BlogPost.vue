@@ -59,17 +59,17 @@ export default {
     align-items: center;
     flex: 4;
     order: 2;
-    @media (min-width: 700px) {
+    @media(min-width: 700px) {
       order: 1;
     }
-    @media (min-width: 800px) {
+    @media(min-width: 800px) {
       flex: 3;
     }
 
     div {
       max-width: 375px;
       padding: 72px 24px;
-      @media (min-width: 700px) {
+      @media(min-width: 700px) {
         padding: 0 24px;
       }
 
@@ -78,8 +78,8 @@ export default {
         font-weight: 300;
         text-transform: uppercase;
         margin-bottom: 24px;
-        @media (min-width: 700px) {
-          font-weight: 40px;
+        @media(min-width: 700px) {
+          font-size: 40px;
         }
       }
 
@@ -93,9 +93,9 @@ export default {
         font-size: 13px;
         max-height: 24px;
         width: 250px;
-        font-size: 13px;
-        max-height: 24px;
         white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
 
       .link {
@@ -104,7 +104,7 @@ export default {
         margin-top: 32px;
         padding-bottom: 4px;
         border-bottom: 1px solid transparent;
-        transition: .5s ease-in all;
+        transition: 0.5s ease-in all;
 
         &:hover {
           border-block-color: #303030;
@@ -123,14 +123,14 @@ export default {
     order: 1;
     flex: 3;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
 
-    @media (min-width: 700px) {
-      order: 4;
+    @media(min-width: 700px) {
+      order: 2;
     }
 
-    @media (min-width: 800px) {
-      order: 2;
+    @media(min-width: 800px) {
+      flex: 4;
     }
 
     img {
@@ -138,6 +138,15 @@ export default {
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+  }
+
+  &:nth-child(even) {
+    .blog-content {
+      order: 2;
+    }
+    .blog-photo {
+      order: 1;
     }
   }
 }
