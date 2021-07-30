@@ -1,5 +1,5 @@
 <template>
-  <div class="blog-wrapper">
+  <div class="blog-wrapper no-user">
     <div class="blog-content">
       <div>
         <h2 v-if="post.welcomeScreen">{{ post.title }}</h2>
@@ -9,7 +9,7 @@
         <router-link class="link link-light" v-if="post.welcomeScreen" to="#">
           Login/Register<Arrow class="arrow arrow-light" />
         </router-link>
-        <router-link class="link link-light" v-else to="#">
+        <router-link class="link" v-else to="#">
           View The Post<Arrow class="arrow" />
         </router-link>
       </div>
@@ -148,6 +148,13 @@ export default {
     .blog-photo {
       order: 1;
     }
+  }
+}
+
+.no-user:first-child {
+  .blog-content {
+    background-color: #303030;
+    color: #fff;
   }
 }
 </style>
