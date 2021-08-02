@@ -40,7 +40,7 @@ export default {
 };
 </script>
 
-<style lang='scss' scoped>
+<style lang="scss" scoped>
 .blog-wrapper {
   display: flex;
   flex-direction: column;
@@ -59,17 +59,17 @@ export default {
     align-items: center;
     flex: 4;
     order: 2;
-    @media(min-width: 700px) {
+    @media (min-width: 700px) {
       order: 1;
     }
-    @media(min-width: 800px) {
+    @media (min-width: 800px) {
       flex: 3;
     }
 
     div {
       max-width: 375px;
       padding: 72px 24px;
-      @media(min-width: 700px) {
+      @media (min-width: 700px) {
         padding: 0 24px;
       }
 
@@ -78,7 +78,7 @@ export default {
         font-weight: 300;
         text-transform: uppercase;
         margin-bottom: 24px;
-        @media(min-width: 700px) {
+        @media (min-width: 700px) {
           font-size: 40px;
         }
       }
@@ -125,11 +125,11 @@ export default {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
       0 2px 4px -1px rgba(0, 0, 0, 0.06);
 
-    @media(min-width: 700px) {
+    @media (min-width: 700px) {
       order: 2;
     }
 
-    @media(min-width: 800px) {
+    @media (min-width: 800px) {
       flex: 4;
     }
 
