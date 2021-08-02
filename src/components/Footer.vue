@@ -152,6 +152,7 @@ footer {
             flex-direction: column;
           }
           .link {
+            padding-top: 32px;
             font-size: 16px;
             font-weight: 500;
             color: #fff;
