@@ -8,14 +8,14 @@
       </div>
       <div class="nav-links">
         <ul v-show="!mobile">
-          <router-link class="link" to="#">Blogs</router-link>
           <router-link class="link" to="#">Home</router-link>
+          <router-link class="link" to="#">Blogs</router-link>
           <router-link class="link" to="#">Create Post</router-link>
           <router-link class="link" to="#">Login/Register</router-link>
         </ul>
       </div>
     </nav>
-    <menuIcon @click="toggleMobileNav" class="menu-icon" v-show="mobile"/>
+    <menuIcon @click="toggleMobileNav" class="menu-icon" v-show="mobile" />
     <transition name="mobile-nav">
       <ul class="mobile-nav" v-show="mobileNav">
         <router-link class="link" to="#">Home</router-link>
@@ -162,6 +162,5 @@ header {
   .mobile-nav-leave-to {
     transform: translateX(-250px);
   }
-
 }
 </style>
