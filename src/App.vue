@@ -1,27 +1,47 @@
 <template>
   <div class="app-wrapper">
     <div class="app">
-      <Navigation/>
+      <Navigation v-if="!navigation" />
       <router-view />
-      <Footer/>
+      <Footer v-if="!navigation" />
     </div>
   </div>
 </template>
 
 <script>
-import Navigation from './components/Navigation'
-import Footer from './components/Footer';
+import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 
 export default {
   name: "app",
-  components: {Navigation, Footer},
+  components: { Navigation, Footer },
   data() {
-    return {};
+    return {
+      navigation: null,
+    };
   },
-  created() {},
+  created() {
+    this.checkRoute();
+  },
   mounted() {},
-  methods: {},
-  watch: {},
+  methods: {
+    checkRoute() {
+      if (
+        this.$route.name === "Login" ||
+        this.$route.name === "Register" ||
+        this.$route.name === "ForgotPassword"
+      ) {
+        this.navigation = true;
+        return;
+      }
+      this.navigation = false;
+    },
+  },
+  watch: {
+    $route() {
+      this.checkRoute();
+    },
+  },
 };
 </script>
 
@@ -99,7 +119,7 @@ button,
   font-size: 15px;
   font-weight: 500;
   background-color: transparent;
-  @media(min-width: 700px) {
+  @media (min-width: 700px) {
     margin-top: 0;
     margin-left: auto;
   }
@@ -125,7 +145,7 @@ button,
   position: relative;
   padding: 80px 16px;
   background-color: #f1f1f1;
-  @media(min-width: 500px) {
+  @media (min-width: 500px) {
     padding: 100px 16px;
   }
 
@@ -134,13 +154,13 @@ button,
     gap: 32px;
     grid-template-columns: 1fr;
 
-    @media(min-width: 500px) {
+    @media (min-width: 500px) {
       grid-template-columns: repeat(2, 1fr);
     }
-    @media(min-width: 900px) {
+    @media (min-width: 900px) {
       grid-template-columns: repeat(3, 1fr);
     }
-    @media(min-width: 1200px) {
+    @media (min-width: 1200px) {
       grid-template-columns: repeat(4, 1fr);
     }
   }
