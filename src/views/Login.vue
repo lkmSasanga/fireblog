@@ -11,6 +11,10 @@
           <input type="text" placeholder="Email" v-model="email">
           <email class="icon"/>
         </div>
+        <div class="input">
+          <input type="password" placeholder="Password" v-model="password">
+          <password class="icon"/>
+        </div>
       </div>
   </form>
 </template>
