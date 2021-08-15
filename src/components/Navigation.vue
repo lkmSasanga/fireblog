@@ -15,6 +15,22 @@
             >Login/Register</router-link
           >
         </ul>
+        <div class="profile" ref="profile">
+          <span>{{ this.$store.state.profileInitials }}</span>
+          <div class="profile-menu">
+            <div class="info">
+              <p class="initials">{{ this.$store.state.profileInitials }}</p>
+              <div class="right">
+                <p>
+                  {{ this.$store.state.profileFirstName }}
+                  {{ this.$store.state.profileLastName }}
+                </p>
+                <p>{{ this.$store.state.profileUserame }}</p>
+                <p>{{ this.$store.state.profileEmail }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </nav>
     <menuIcon @click="toggleMobileNav" class="menu-icon" v-show="mobile" />

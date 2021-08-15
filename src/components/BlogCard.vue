@@ -36,7 +36,7 @@ export default {
   },
   computed: {
     editPost() {
-      console.log("from blog card", this.$store.state.editPost);
+      // console.log("from blog card", this.$store.state.editPost);
       return this.$store.state.editPost;
     },
   },
