@@ -2,7 +2,7 @@ import Vue from "vue";
 import Vuex from "vuex";
 import firebase from "firebase/app";
 import "firebase/auth";
-import db from "..firebase/firebaseInit";
+import db from "../firebase/firebaseInit";
 
 Vue.use(Vuex);
 
@@ -49,11 +49,11 @@ export default new Vuex.Store({
       state.profileFirstName = doc.date().firstName;
       state.profileLastName = doc.date().lastName;
       state.profileUsername = doc.date().username;
-
     },
     setProfileInitials(state) {
       state.profileInitials =
-        state.profileFirstName.match(/(\b\S)?/g).join("") + state.profileLastName.match(/(\b\S)?/g).join("");
+        state.profileFirstName.match(/(\b\S)?/g).join("") +
+        state.profileLastName.match(/(\b\S)?/g).join("");
     },
   },
   actions: {
